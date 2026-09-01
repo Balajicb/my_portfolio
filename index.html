@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Balaji K (Sham) — Backend Developer</title>
+<title>Balaji K — Backend Developer</title>
 <meta name="description" content="Backend Software Developer — Node.js, TypeScript, Firebase, MySQL, AWS">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -95,6 +95,22 @@
 
   .hero h1{ font-size:44px; font-weight:800; line-height:1.12; }
   .hero .role{ color:var(--accent); }
+  .name-icon{
+    display:inline-flex;
+    vertical-align:middle;
+    color:var(--accent);
+    margin-left:2px;
+  }
+  .type-cursor{
+    display:inline-block;
+    color:var(--accent);
+    animation: blink 0.9s step-end infinite;
+  }
+  .type-cursor.done{
+    animation:none;
+    opacity:0;
+  }
+  @keyframes blink{ 0%,100%{ opacity:1; } 50%{ opacity:0; } }
   .hero p.lede{ font-size:17px; color:var(--ink-soft); margin-top:18px; max-width:46ch; }
   .hero-actions{ display:flex; gap:12px; margin-top:30px; flex-wrap:wrap; }
 
@@ -225,6 +241,7 @@
       <a href="#skills">skills</a>
       <a href="#experience">experience</a>
       <a href="#projects">projects</a>
+      <a href="#education">education</a>
       <a href="#contact">contact</a>
     </nav>
   </div>
@@ -232,12 +249,17 @@
   <header class="hero">
     <div class="wrap hero-grid">
       <div>
-        <h1>Balaji K <span style="color:var(--ink-soft); font-weight:600;">(Sham)</span><br><span class="role">Backend Software Developer</span></h1>
+        <h1>Balaji K <span class="name-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="4" width="20" height="13" rx="2" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M8 20h8M12 17v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <path d="M7 9l2 2-2 2M12.5 13h2.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span><br><span class="role" id="typed-role"></span><span class="type-cursor" id="type-cursor">|</span></h1>
         <p class="lede">I design and ship server-side systems — APIs, scheduling engines, and cloud integrations — with 3+ years building production backend infrastructure.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="assets/resume.pdf" target="_blank" rel="noopener">Download Resume</a>
-          <a class="btn btn-outline" href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a class="btn btn-outline" href="#contact">Get in touch</a>
+          <a class="btn btn-primary" href="assets/resume.pdf" download="Balaji_K_Backend_Developer_Resume.pdf">Download Resume</a>
+          <a class="btn btn-outline" href="https://www.linkedin.com/in/balaji-k-4aa692202/" target="_blank" rel="noopener">LinkedIn ↗</a>
         </div>
       </div>
       <div class="api-card reveal">
@@ -278,11 +300,17 @@
       <h2>Skills</h2>
       <div class="skills-grid">
         <div class="skill"><div class="name">Node.js</div><span class="tag">runtime</span></div>
-        <div class="skill"><div class="name">JavaScript</div><span class="tag">language</span></div>
+        <div class="skill"><div class="name">Express.js</div><span class="tag">framework</span></div>
+        <div class="skill"><div class="name">JavaScript (ES6+)</div><span class="tag">language</span></div>
         <div class="skill"><div class="name">TypeScript</div><span class="tag">language</span></div>
-        <div class="skill"><div class="name">MySQL</div><span class="tag">database</span></div>
-        <div class="skill"><div class="name">Firebase</div><span class="tag">Cloud Functions / Firestore</span></div>
-        <div class="skill"><div class="name">AWS</div><span class="tag">cloud</span></div>
+        <div class="skill"><div class="name">MySQL</div><span class="tag">schema design, indexing, stored procedures</span></div>
+        <div class="skill"><div class="name">Firebase</div><span class="tag">Cloud Functions, Auth, Storage, Firestore</span></div>
+        <div class="skill"><div class="name">AWS</div><span class="tag">Cloud Practitioner certified</span></div>
+        <div class="skill"><div class="name">Joi</div><span class="tag">schema validation (TypeScript)</span></div>
+        <div class="skill"><div class="name">eKYC APIs</div><span class="tag">PAN, GSTIN, Aadhaar</span></div>
+        <div class="skill"><div class="name">Razorpay</div><span class="tag">payment gateway</span></div>
+        <div class="skill"><div class="name">Postman</div><span class="tag">API testing</span></div>
+        <div class="skill"><div class="name">Git / GitHub / GitLab</div><span class="tag">version control</span></div>
       </div>
     </div>
   </section>
@@ -293,29 +321,29 @@
       <h2>Experience</h2>
 
       <div class="exp-item">
-        <div class="period">Current</div>
+        <div class="period">Jan 2026 – Present</div>
         <div>
           <h3>Backend Developer</h3>
           <div class="org">Ticket9 Event Tech Private Limited</div>
-          <p>Building an activity booking platform — scheduling &amp; availability generation, eKYC verification, and payment integrations, using Node.js, TypeScript, Firebase Cloud Functions, and Firestore.</p>
+          <p>Designed and developed a Firebase-based activity scheduling and event/booking management platform, including Cloud Functions, Firestore data models, and Firebase Storage utilities. Built Joi validation schemas in TypeScript with conditional logic for coupon/discount systems and a dynamic form-builder application. Integrated eKYC and business identity verification (PAN, GSTIN, Aadhaar) via MessageCentral API, and implemented Firestore substring/keyword search using n-gram token-array patterns with array-contains queries.</p>
         </div>
       </div>
 
       <div class="exp-item">
-        <div class="period">Previously</div>
+        <div class="period">Jan 2023 – Jun 2025</div>
         <div>
-          <h3>Software Developer</h3>
+          <h3>Backend Developer</h3>
           <div class="org">Ahsan Solutions</div>
-          <p>Backend development work prior to joining Ticket9 Event Tech.</p>
+          <p>Developed RESTful APIs and backend logic for multiple client projects spanning health and nutrition tracking, NGO donation management, e-commerce, and corporate websites — including subscription health platform with BMR-based meal plans and an NGO web application (donor and beneficiary management APIs).</p>
         </div>
       </div>
 
       <div class="exp-item">
-        <div class="period">Earlier</div>
+        <div class="period">May 2022 – Oct 2022</div>
         <div>
-          <h3>Trainee</h3>
-          <div class="org">Traineeship</div>
-          <p>Early hands-on training that built the foundation for a backend development career.</p>
+          <h3>Trainee – Process Associate</h3>
+          <div class="org">Aggregate Intelligence India Pvt. Ltd.</div>
+          <p>Extracted structured and unstructured data from travel, hospitality, and self-storage market sources, and performed data integrity checks against MySQL records.</p>
         </div>
       </div>
     </div>
@@ -325,42 +353,92 @@
     <div class="wrap">
       <p class="eyebrow">04 projects</p>
       <h2>Featured Work</h2>
-      <div class="project-card">
-        <h3>Activity Booking Platform — Scheduling &amp; Availability Engine</h3>
-        <div class="stack">Node.js · TypeScript · Firebase Cloud Functions · Firestore</div>
-        <p>Core backend systems powering an activity booking platform at Ticket9 Event Tech.</p>
-        <ul>
-          <li>Availability generation and schedule synchronization across activities and timezones</li>
-          <li>eKYC verification flow for user onboarding</li>
-          <li>Payment gateway integrations for bookings</li>
-        </ul>
+      <div style="display:flex; flex-direction:column; gap:18px;">
+        <div class="project-card">
+          <h3>Activity &amp; Booking Management Platform</h3>
+          <div class="stack">Node.js · TypeScript · Firebase Cloud Functions · Firestore</div>
+          <p>Scalable backend for activity scheduling, KYC verification, and booking workflows at Ticket9 Event Tech.</p>
+          <ul>
+            <li>Availability generation and schedule synchronization using Firestore data models and Cloud Functions</li>
+            <li>eKYC / business identity verification (PAN, GSTIN, Aadhaar) via MessageCentral API</li>
+            <li>Firestore substring/keyword search using n-gram token-array patterns with array-contains queries</li>
+            <li>Joi validation schemas in TypeScript with conditional logic for coupon/discount systems and a dynamic form-builder</li>
+          </ul>
+        </div>
+        <div class="project-card">
+          <h3>Subscription Health &amp; Nutrition Platform</h3>
+          <div class="stack">Node.js · MySQL</div>
+          <p>Backend for a subscription-based health and nutrition tracking platform.</p>
+          <ul>
+            <li>Optimized MySQL database design for scalable user and subscription data management</li>
+            <li>Built BMR-based personalized meal plan logic</li>
+          </ul>
+        </div>
+        <div class="project-card">
+          <h3>NGO Web Application</h3>
+          <div class="stack">Node.js · REST APIs</div>
+          <p>Secure backend for donor and beneficiary management.</p>
+          <ul>
+            <li>Donor registration and donation history tracking</li>
+            <li>Beneficiary management APIs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <p class="eyebrow">05 education</p>
+      <h2>Education &amp; Certifications</h2>
+      <div class="exp-item" style="border-top:1px solid var(--line);">
+        <div class="period">2022 – 2024</div>
+        <div>
+          <h3>MCA — Master of Computer Applications</h3>
+          <div class="org">Alagappa University</div>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="period">2018 – 2021</div>
+        <div>
+          <h3>BCA — Bachelor of Computer Applications</h3>
+          <div class="org">Bharathidasan University</div>
+        </div>
+      </div>
+      <div class="exp-item" style="border-bottom:1px solid var(--line);">
+        <div class="period">2025</div>
+        <div>
+          <h3>AWS Certified Cloud Practitioner</h3>
+          <div class="org">Amazon Web Services (AWS)</div>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="resume">
     <div class="wrap">
-      <p class="eyebrow">05 resume</p>
+      <p class="eyebrow">06 resume</p>
       <h2>Resume</h2>
       <div class="resume-box">
         <div>
           <div class="label">balaji-k_resume.pdf</div>
           <h3>Get the full breakdown</h3>
         </div>
-        <a class="btn btn-primary" href="assets/resume.pdf" target="_blank" rel="noopener">Download PDF ↓</a>
+        <a class="btn btn-primary" href="assets/resume.pdf" download="Balaji_K_Backend_Developer_Resume.pdf">Download PDF ↓</a>
       </div>
     </div>
   </section>
 
   <section id="contact" style="background:var(--bg-alt); border-top:1px solid var(--line);">
     <div class="wrap">
-      <p class="eyebrow">06 contact</p>
-      <h2>Get in touch</h2>
+      <p class="eyebrow">07 contact</p>
+      <h2>Contact</h2>
       <div class="contact-grid">
         <div class="links">
-          <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener">LinkedIn <span class="arrow">↗</span></a>
+          <a href="https://www.linkedin.com/in/balaji-k-4aa692202/" target="_blank" rel="noopener">LinkedIn <span class="arrow">↗</span></a>
           <a href="https://github.com/your-github" target="_blank" rel="noopener">GitHub <span class="arrow">↗</span></a>
-          <a href="mailto:you@example.com">Email <span class="arrow">↗</span></a>
+          <a href="mailto:balag6055@gmail.com">Email <span class="arrow">↗</span></a>
+          <a href="tel:+919344496597">+91 93444 96597 <span class="arrow">↗</span></a>
         </div>
         <form id="contact-form">
           <input type="text" name="name" placeholder="Your name" required>
@@ -379,6 +457,24 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // typewriter effect for the role line
+    (function typeRole(){
+      const el = document.getElementById('typed-role');
+      const cursor = document.getElementById('type-cursor');
+      const text = 'Backend Software Developer';
+      let i = 0;
+      function tick(){
+        if (i <= text.length){
+          el.textContent = text.slice(0, i);
+          i++;
+          setTimeout(tick, 55);
+        } else {
+          cursor.classList.add('done');
+        }
+      }
+      setTimeout(tick, 400);
+    })();
 
     // scroll reveal
     if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
